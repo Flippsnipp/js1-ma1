@@ -53,7 +53,7 @@ const paragraph = document.querySelectorAll ("p");
     <div class="results"></div>
 */
 
-const resultsContainer = document.querySelector("div");
+const resultsContainer = document.querySelector(".results");
 resultsContainer.innerHTML = `<p>
                                 New paragraph
                             </p>`;
@@ -64,41 +64,38 @@ resultsContainer.innerHTML = `<p>
     Inside the function, loop through the catArray argument and console log the name property in each object.
     Call the function and pass in the cats variable below.
 */
+const cats = [
+    {
+        name: "Blob",
+        age: 10
+    },
+    {
+        name: "Harold",
+    },
+    {
+        name: "Blurt",
+        age: 21
+    }
+];
 
-function catArray() {
-    for (let i = 0; catArray.length < 0; i++;){
-        const cats = [
-            {
-                name: "Blob",
-                age: 10
-            },
-            {
-                name: "Harold",
-            },
-            {
-                name: "Blurt",
-                age: 21
-            }
-        ];
-
+function catFunction(catArray) {
+    for (let i = 0; catArray.length < 0; i++){
     } 
-    console.log(catArray[0]);
-    console.log(catArray[1]);
-    console.log(catArray[2]);
+    console.log(catArray[i].name);
 }
 
-catArray(cats);
+catFunction(cats);
 
 /*
     Question 8
     Using the function and cats variable from the above question, instead of logging the name property, wrap each name property in an h5 tag, add it to a variable you declare before the loop and return the variable from the function after the loop.
 */
 function catsSuck(catArray) {
-    let catsHTML = "";
+    let catText = "";
     for (let i = 0; i < catarray.length; i++) {
-    catsHTML +=  `<h5>${catArray[i].name}</h5>`;
-    console.log(catsHTML);
-    return catsHTML;
+    catText +=  `<h5>${catArray[i].name}</h5>`;
+    }
+    return catText;
 }
 };
 
